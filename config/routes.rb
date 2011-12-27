@@ -13,6 +13,9 @@ Locials::Application.routes.draw do
   match 'people/search' => 'people#search'
   resources :people
 
+  match 'photos/new' => 'photos#new'
+  resources :photos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
