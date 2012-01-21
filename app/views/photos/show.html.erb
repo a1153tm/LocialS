@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <b>Image:</b>
-  <%= @photo.image %>
-</p>
-
-<p>
   <b>Targetageid:</b>
   <%= @photo.targetageid %>
 </p>
@@ -29,11 +24,9 @@
   <b>Owner:</b>
   <%= @photo.owner_id %>
 </p>
-
-<p>
-  <b>Posteddate:</b>
-  <%= @photo.posteddate %>
-</p>
+<div>
+  <%= image_tag @photo.image_url.to_s %>  
+</div>
 
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

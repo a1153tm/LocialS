@@ -3,12 +3,10 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Image</th>
     <th>Targetageid</th>
     <th>Targetareaid</th>
     <th>Targetsex</th>
     <th>Owner</th>
-    <th>Posteddate</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,12 +15,10 @@
 <% @photos.each do |photo| %>
   <tr>
     <td><%= photo.title %></td>
-    <td><%= photo.image %></td>
     <td><%= photo.targetageid %></td>
     <td><%= photo.targetareaid %></td>
     <td><%= photo.targetsex %></td>
     <td><%= photo.owner_id %></td>
-    <td><%= photo.posteddate %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
     <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>

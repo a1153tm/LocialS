@@ -16,10 +16,6 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
     <%= f.label :targetageid %><br />
     <%= f.number_field :targetageid %>
   </div>
@@ -36,8 +32,8 @@
     <%= f.number_field :owner_id %>
   </div>
   <div class="field">
-    <%= f.label :posteddate %><br />
-    <%= f.datetime_select :posteddate %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
   </div>
   <div class="actions">
     <%= f.submit %>
