@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ageid: 1
+  areaid: 1
+  name: MyString
+  sex: false
+
+two:
+  ageid: 1
+  areaid: 1
+  name: MyString
+  sex: false
