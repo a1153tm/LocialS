@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @photo.image %>
+</p>
+
+<p>
+  <b>Targetageid:</b>
+  <%= @photo.targetageid %>
+</p>
+
+<p>
+  <b>Targetareaid:</b>
+  <%= @photo.targetareaid %>
+</p>
+
+<p>
+  <b>Targetsex:</b>
+  <%= @photo.targetsex %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @photo.owner_id %>
+</p>
+
+<p>
+  <b>Posteddate:</b>
+  <%= @photo.posteddate %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

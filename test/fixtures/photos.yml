@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  image: MyString
+  targetageid: 1
+  targetareaid: 1
+  targetsex: false
+  owner_id: 1
+  posteddate: 2012-01-21 20:46:06
+
+two:
+  title: MyString
+  image: MyString
+  targetageid: 1
+  targetareaid: 1
+  targetsex: false
+  owner_id: 1
+  posteddate: 2012-01-21 20:46:06
