@@ -27,6 +27,21 @@
 <div>
   <%= image_tag @photo.image_url.to_s %>  
 </div>
+<div>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Comment</th>
+    </tr>
+  
+    <% @comments.each do |comment| %>
+     <tr>
+       <td><%= comment.created_at %></td>
+       <td><%= comment.comment %></td>
+     </tr>
+   <% end %>
+  </table>
+</div>
 
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

@@ -1,4 +1,6 @@
 Locials::Application.routes.draw do
+  resources :comments
+
   resources :photos
 
   resources :people
