@@ -1,0 +1,20 @@
+<h1>PhotoList</h1>
+
+<table>
+<% @photos.each do |photo| %>
+  <tr>
+    <td>
+    <%= image_tag photo.image_url.to_s %>
+    </td>
+    <td>
+	<b>Title:</b><%= photo.title %><br>
+	<b>name :</b><%= photo.owner_id %><br>
+    </td>
+    <td>
+    	 <td><%= link_to 'Show', photo %></td>
+    </td>
+  </tr>
+<% end %>
+
+</table>
+<%= link_to 'Back', photos_path %>
