@@ -13,8 +13,17 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+    # for unit test
+    # remove below when functional test
+    
+
+    # for display
     @photo = Photo.find(params[:id])
+    session[:photo_id] = @photo.id
     @comments = @photo.comments
+
+    # for add comment
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb

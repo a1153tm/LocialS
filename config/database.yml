@@ -18,7 +18,7 @@ development:
   database: locials_development
   pool: 5
   username: locials
-  password: locials
+  password: maniachitpoi
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,7 +44,7 @@ test:
   database: locials_test
   pool: 5
   username: locials
-  password: locials
+  password: maniachitpoi
 
 production:
   adapter: postgresql
@@ -52,4 +52,4 @@ production:
   database: locials_production
   pool: 5
   username: locials
-  password: locials
+  password: maniachitpoi

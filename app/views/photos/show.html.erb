@@ -31,18 +31,21 @@
   <table>
     <tr>
       <th>Date</th>
+      <th>Name</th>
       <th>Comment</th>
     </tr>
   
     <% @comments.each do |comment| %>
      <tr>
-       <td><%= comment.created_at %></td>
+       <td><%= comment.created_at.strftime("%Y-%m-%d") %></td>
+       <td><%= comment.person.name %>
        <td><%= comment.comment %></td>
      </tr>
    <% end %>
   </table>
 </div>
 
+<%= render 'form_comment' %>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
