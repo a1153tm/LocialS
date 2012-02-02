@@ -1,4 +1,10 @@
 Locials::Application.routes.draw do
+  resources :sexes
+
+  resources :ages
+
+  resources :areas
+
   resources :comments
 
   resources :photos

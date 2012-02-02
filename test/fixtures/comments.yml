@@ -2,10 +2,10 @@
 
 one:
   comment: MyText
-  photo_id: 1
+  photo_id: 298486374
   person_id: 1
 
 two:
-  comment: MyText
-  photo_id: 1
-  person_id: 1
+  comment: 日本語
+  photo_id: 2
+  person_id: 2

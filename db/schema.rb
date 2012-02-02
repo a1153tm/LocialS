@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120122114850) do
+ActiveRecord::Schema.define(:version => 20120202102333) do
+
+  create_table "ages", :force => true do |t|
+    t.string   "age_range"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "areas", :force => true do |t|
+    t.string   "area_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
@@ -38,6 +50,12 @@ ActiveRecord::Schema.define(:version => 20120122114850) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+  end
+
+  create_table "sexes", :force => true do |t|
+    t.string   "sex"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
