@@ -7,6 +7,7 @@ Locials::Application.routes.draw do
 
   resources :comments
 
+  match 'photos/list' => 'photos#list'
   resources :photos
 
   resources :people

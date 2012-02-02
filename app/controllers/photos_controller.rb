@@ -90,4 +90,14 @@ class PhotosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+ def list
+   #@photos = Photo.find(params[:owner_id])
+   @photos = Photo.all
+   respond_to do |format|
+     format.html
+     format.json{render :json=> @photo}
+   end
+ end
+
 end
