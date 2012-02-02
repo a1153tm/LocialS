@@ -1,3 +1,3 @@
 class Age < ActiveRecord::Base
-   validates :area_range, :presence => true
+   validates :age_range, :presence => true
 end

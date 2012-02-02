@@ -16,16 +16,19 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :age_id %><br />
-    <%= f.number_field :age_id %>
+    <%= f.label :area_id %><br />
+    <!--<<%= f.number_field :area_id %>-->
+    <%= f.collection_select 'area_id', Area.find(:all), :id, :area_name %>
   </div>
   <div class="field">
-    <%= f.label :area_id %><br />
-    <%= f.number_field :area_id %>
+    <%= f.label :age_id %><br />
+    <!--<%= f.number_field :age_id %>-->
+    <%= f.collection_select 'age_id', Age.find(:all), :id, :age_range %>
   </div>
   <div class="field">
     <%= f.label :sex_id %><br />
-    <%= f.number_field :sex_id %>
+    <!--<%= f.number_field :sex_id %>-->
+    <%= f.collection_select 'sex_id', Sex.find(:all), :id, :sex %>
   </div>
   <div class="actions">
     <%= f.submit %>
