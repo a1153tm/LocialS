@@ -6,23 +6,13 @@
 </p>
 
 <p>
-  <b>Targetageid:</b>
-  <%= @photo.targetageid %>
+  <b>Description:</b>
+  <%= @photo.description %>
 </p>
 
 <p>
-  <b>Targetareaid:</b>
-  <%= @photo.targetareaid %>
-</p>
-
-<p>
-  <b>Targetsex:</b>
-  <%= @photo.targetsex %>
-</p>
-
-<p>
-  <b>Owner:</b>
-  <%= @photo.owner_id %>
+  <b>Person:</b>
+  <%= @photo.person_id %>
 </p>
 <div>
   <%= image_tag @photo.image_url.to_s %>  

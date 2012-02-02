@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  targetageid: 1
-  targetareaid: 1
-  targetsex: false
-  owner_id: 1
+  title: MyString1
+  description: afeofkeamfresfregr
+  person_id: 1
+  image: /Users/miyabetaiji/Dropbox/Android/android-calendar.jpg
 
 two:
-  title: MyString
-  targetageid: 1
-  targetareaid: 1
-  targetsex: false
-  owner_id: 1
+  title: 写真
+  description: テストだがね
+  person_id: 1
+  image: /Users/miyabetaiji/Dropbox/Android/android-logo.png

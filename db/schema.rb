@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202120257) do
+ActiveRecord::Schema.define(:version => 20120202140527) do
 
   create_table "ages", :force => true do |t|
     t.string   "age_range"
@@ -43,13 +43,11 @@ ActiveRecord::Schema.define(:version => 20120202120257) do
 
   create_table "photos", :force => true do |t|
     t.string   "title"
-    t.integer  "targetageid"
-    t.integer  "targetareaid"
-    t.boolean  "targetsex"
-    t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "person_id"
+    t.text     "description"
   end
 
   create_table "sexes", :force => true do |t|
