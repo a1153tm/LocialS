@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  area_name: 品川区
+
+two:
+  area_name: 大田区
+
+three:
+  area_name: 新宿区
+
+four:
+  area_name: 福生市
+

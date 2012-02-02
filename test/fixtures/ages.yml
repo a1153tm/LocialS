@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  age_range: 10代
+
+two:
+  age_range: 20代
+
+three:
+  age_range: 30代
+
+four:
+  age_range: 40代
+
+five:
+  age_range: 50代
+
