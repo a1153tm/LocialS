@@ -80,4 +80,15 @@ class PeopleController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  # SEARCH /search
+  def search
+    @person = Person.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @person }
+    end
+  end
+
+
 end
