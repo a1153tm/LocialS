@@ -8,7 +8,7 @@ set :scm, :git
 
 set :use_sudo, false
 
-role :web, "mhp@avenueq.tachibanakikaku.com"
+#role :web, "mhp@avenueq.tachibanakikaku.com"
 role :app, "mhp@avenueq.tachibanakikaku.com"
 #role :db,  "localhost", :primary => true # This is where Rails migrations will run
 #role :db,  "localhost"
