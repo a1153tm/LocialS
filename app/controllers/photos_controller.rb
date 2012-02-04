@@ -92,11 +92,15 @@ class PhotosController < ApplicationController
   end
 
  def list
-   #@photos = Photo.find(params[:owner_id])
-   @photos = Photo.all
-   respond_to do |format|
-     format.html
-     format.json{render :json=> @photo}
+   @p = Person.new(params[:person])
+   @person = Person.where(:name=>@p.name).where(:area_id=>@p.area_id).where(:age_id=>@p.age_id).where(:sex_id=>@p.sex_id)
+   #@photos = Photo.find_by_sex_id(@person.sex_id)
+   if 0!=@person.length then
+     @photos = Photo.where(:person_id=>@person[0].id)
+     respond_to do |format|
+       format.html
+       format.json{render :json=> @photo}
+     end
    end
  end
 
