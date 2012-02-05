@@ -1,0 +1,33 @@
+<%= form_for(@person, :url=>{ :controller=>"photos", :action=>"list" } ) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this people from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :Age %><br />
+    <%= f.collection_select 'age_id', Age.find(:all), :id, :age_range %>
+  </div>
+  <div class="field">
+    <%= f.label :Area %><br />    
+    <%= f.collection_select 'area_id', Area.find(:all), :id, :area_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Sex %><br />
+    <%= f.collection_select 'sex_id', Sex.find(:all), :id, :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="action">
+    <%= f.submit "Search" %>
+  </div>
+<% end %>
+
