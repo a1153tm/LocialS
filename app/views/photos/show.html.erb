@@ -12,7 +12,7 @@
 
 <p>
   <b>Person:</b>
-  <%= @photo.person_id %>
+  <%= @photo.person.name %>
 </p>
 <div>
   <%= image_tag @photo.image_url.to_s %>  

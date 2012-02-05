@@ -8,9 +8,10 @@ set :scm, :git
 
 set :use_sudo, false
 
-#role :web, "mhp@avenueq.tachibanakikaku.com"
+role :web, "mhp@avenueq.tachibanakikaku.com"
 role :app, "mhp@avenueq.tachibanakikaku.com"
-#role :db,  "localhost", :primary => true # This is where Rails migrations will run
+#role :db,  "mhp@avenueq.tachibanakikaku.com"
+#role :db,  "192.168.200.16", :primary => true # This is where Rails migrations will run
 #role :db,  "localhost"
 
 # if you're still using the script/reaper helper you will need
