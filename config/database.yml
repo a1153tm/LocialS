@@ -51,5 +51,7 @@ production:
   encoding: unicode
   database: locials_production
   pool: 5
+  host: 192.168.200.15
+  port: 9999
   username: locials
   password: maniachitpoi
