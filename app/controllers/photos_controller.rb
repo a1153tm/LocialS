@@ -95,6 +95,10 @@ class PhotosController < ApplicationController
    @p = Person.new(params[:person])
    @person = Person.where(:name=>@p.name).where(:area_id=>@p.area_id).where(:age_id=>@p.age_id).where(:sex_id=>@p.sex_id)
    #@photos = Photo.find_by_sex_id(@person.sex_id)
+    logger.debug "gggggggggg3"
+    logger.debug @p.name
+    logger.debug @person[0].id
+    logger.debug @person[0].name
    if 0!=@person.length then
      @photos = Photo.where(:person_id=>@person[0].id)
      respond_to do |format|
