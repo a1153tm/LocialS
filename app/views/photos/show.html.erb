@@ -1,35 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @photo.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @photo.description %>
-</p>
-
-<p>
-  <b>Person:</b>
-  <%= @photo.person.name %>
-</p>
-<div>
-  <%= image_tag @photo.image_url.to_s %>  
+<div Class="detail">
+  <div>
+    <%= image_tag @photo.image_url.to_s %>  
+  </div>
+  <h3><%= @photo.title %></h3>
+  <h3><%= @photo.person.name %> さん</h3>
+  <p><%= @photo.description %></p>
 </div>
-<div>
+
+<div Class="comments">
   <table>
     <tr>
-      <th>Date</th>
-      <th>Name</th>
-      <th>Comment</th>
+      <th class="header_date">日付</th>
+      <th class="header_person">ユーザ</th>
+      <th class="header_comment">コメント</th>
     </tr>
   
     <% @comments.each do |comment| %>
      <tr>
-       <td><%= comment.created_at.strftime("%Y-%m-%d") %></td>
-       <td><%= comment.person.name %>
-       <td><%= comment.comment %></td>
+       <td class="list_date"><%= comment.created_at.strftime("%Y-%m-%d") %></td>
+       <td class="list_person"><%= comment.person.name %>
+       <td class="list_comment"><%= comment.comment %></td>
      </tr>
    <% end %>
   </table>
