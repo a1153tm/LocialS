@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+  <div id="banner">
+    <div id="img">
+      <%= image_tag("logo.jpg") %>
+    </div>
+    <%= "LocialS" %>
+  </div>
   <div id="columns">
     <div id="side">
       <ul>
@@ -14,9 +20,9 @@
         <li><a href="../people/seach">人物検索</a></li>
       </ul>
     </div>
-  </div>
-  <div id="main">
-    <%= yield %>
+    <div id="main">
+      <%= yield %>
+    </div>
   </div>
 
 </body>
