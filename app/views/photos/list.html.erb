@@ -1,22 +1,22 @@
-<h1>PhotoList</h1>
+<h1>Photo lists</h1>
 
 
 <% if nil != @photos then %>
-  <table>
-  <% @photos.each do |photo| %>
-    <tr>
-      <td>
-      <%= image_tag photo.image_url.to_s %>
-      </td>
-      <td>
-  	  <b>Title:</b><%= photo.title %><br>
-	  <b>name :</b><%= Person.find(photo.person_id).name %><br>
-      </td>
-      <td>
-    	 <td><%= link_to 'Show', photo %></td>
-      </td>
-    </tr>
+  <table class="photo_lists">
+    <% @photos.each do |photo| %>
+      <tr class="item">
+        <td class="list_img">
+          <%= image_tag(photo.image_url.to_s, :class=>'img') %>
+        </td>
+        <td class="list_info">
+  	      <b>タイトル:</b><%= photo.title %><br>
+	        <b>ユーザー:</b><%= @person[0].name %><br>
+        </td>
+        <td class="list_link">
+    	    <%= link_to '詳細', photo %></td>
+        </td>
+      </tr>
+    <% end %>
   </table>
-  <% end %>
 <% end %>
-<%= link_to 'Back', photos_path %>
+<!--<%= link_to 'Back', photos_path %>-->
