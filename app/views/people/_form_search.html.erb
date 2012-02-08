@@ -11,23 +11,23 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :Age %><br />
+    <%= f.label :年齢 %><br />
     <%= f.collection_select 'age_id', Age.find(:all), :id, :age_range %>
   </div>
   <div class="field">
-    <%= f.label :Area %><br />    
+    <%= f.label :地域 %><br />    
     <%= f.collection_select 'area_id', Area.find(:all), :id, :area_name %>
   </div>
   <div class="field">
-    <%= f.label :Sex %><br />
+    <%= f.label :性別 %><br />
     <%= f.collection_select 'sex_id', Sex.find(:all), :id, :sex %>
   </div>
   <div class="field">
-    <%= f.label :Name %><br />
+    <%= f.label :ユーザー名 %><br />
     <%= f.text_field :name %>
   </div>
   <div class="action">
-    <%= f.submit "Search" %>
+    <%= f.submit "検索" %>
   </div>
 <% end %>
 
