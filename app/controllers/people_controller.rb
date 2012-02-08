@@ -90,5 +90,12 @@ class PeopleController < ApplicationController
     end
   end
 
+  # LOGIN /login
+  def login
+    @person = Person.new
+    respond_to do |format|
+       format.html # login.html.erb
+    end
+  end
 
 end

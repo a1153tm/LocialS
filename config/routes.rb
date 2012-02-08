@@ -1,4 +1,7 @@
 Locials::Application.routes.draw do
+  match 'people/login' => 'people#login'
+  resources :people 
+
   resources :sexes
 
   resources :ages
