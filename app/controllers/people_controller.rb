@@ -90,7 +90,7 @@ class PeopleController < ApplicationController
     end
   end
 
-  # LOGIN /login
+  # GET /login
   def login
     @person = Person.new
     respond_to do |format|
@@ -98,4 +98,21 @@ class PeopleController < ApplicationController
     end
   end
 
+  # POST /authenticate
+  def authenticate
+    name = params[:person][:name]
+    password = params[:password]
+
+    respond_to do |format|
+      persons =  Person.where(:name=>name)
+      if persons.size == 0 then
+        format.html { redirect_to '/people/login', :notice => 'invalid user' }
+      elsif password != "mhp"
+        format.html { redirect_to '/people/login', :notice => 'invalid password' }
+      else
+        session[:person_id] = persons[0].id
+        format.html { redirect_to '/photos/new'}
+      end
+    end
+  end
 end

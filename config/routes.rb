@@ -1,6 +1,6 @@
 Locials::Application.routes.draw do
   match 'people/login' => 'people#login'
-  resources :people 
+  match 'people/authenticate' => 'people#authenticate'
 
   resources :sexes
 
