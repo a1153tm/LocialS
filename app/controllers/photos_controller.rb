@@ -51,8 +51,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(params[:photo])
-    # for test
-    @photo.person_id = 1
+    @photo.person_id = session[:person_id]
 
     respond_to do |format|
       if @photo.save

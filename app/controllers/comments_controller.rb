@@ -42,9 +42,8 @@ class CommentsController < ApplicationController
   def create
     # set current_photo_id
     params[:comment][:photo_id] = session[:photo_id]
-
-    # for unit test
-    params[:comment][:person_id] = 1
+    # set current_person_id
+    params[:comment][:person_id] = session[:person_id] 
 
     # carete instance
     @comment = Comment.new(params[:comment])
