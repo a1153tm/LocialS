@@ -23,7 +23,7 @@ namespace :deploy do
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-    run "~/release.sh"
     run "cd #{deploy_to}/current/ && sed -ie \"s/'localhost'/'192.168.99.11', '192.168.99.12'/g\" config/initializers/session_store.rb"
+    run "~/release.sh"
   end
 end
