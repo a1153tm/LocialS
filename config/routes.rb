@@ -1,6 +1,13 @@
 Locials::Application.routes.draw do
   match 'people/login' => 'people#login'
   match 'people/authenticate' => 'people#authenticate'
+  match 'people/search' => 'people#search'
+  resources :people
+
+  match 'photos/list' => 'photos#list'
+  match 'photos/new' => 'photos#new'
+  match 'photos/add_comment' => 'photos#add_comment'
+  resources :photos
 
   resources :sexes
 
@@ -9,15 +16,6 @@ Locials::Application.routes.draw do
   resources :areas
 
   resources :comments
-
-  match 'photos/list' => 'photos#list'
-  resources :photos
-
-  match 'people/search' => 'people#search'
-  resources :people
-
-  match 'photos/new' => 'photos#new'
-  resources :photos
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

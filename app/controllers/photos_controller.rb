@@ -105,4 +105,24 @@ class PhotosController < ApplicationController
    end
  end
 
+  # POST /comments
+  def add_comment
+    # set current_photo_id
+    params[:comment][:photo_id] = session[:photo_id]
+    # set current_person_id
+    params[:comment][:person_id] = session[:person_id] 
+
+    # carete instance
+    @comment = Comment.new(params[:comment])
+
+    respond_to do |format|
+      if @comment.save
+        @photo = Photo.find(session[:photo_id])
+        format.html { redirect_to @photo, :notice => 'コメントが追加されました' }
+      else
+        format.html { redirect_to @photo, :notice => 'コメント追に失敗しました' }
+      end
+    end
+  end
+
 end
